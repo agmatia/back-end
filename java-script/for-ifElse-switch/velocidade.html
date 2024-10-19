@@ -1,0 +1,19 @@
+<script>
+const vel = Number(prompt("Informe a sua velocidade: "));
+const ref = Number(prompt("Informe a velocidade da via: "));
+const valor = 20/100;
+
+let multa;
+let porcentagem;
+
+multa = ref+(ref*valor);
+porcentagem = (((vel*100)/ref)-100).toFixed(2);
+
+if(vel > ref && vel <= multa){
+   alert(`Multa Leve! Valor: ${porcentagem}%`);
+} else if(vel > multa){
+    alert(`Multa grave! Valor: ${porcentagem}%`);
+} else {
+    alert(`Nao ha multas!`)
+}
+</script>
